@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Portal</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #2d3436;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00cec9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d3436;
+      margin-top: 30px;
+    }
+
+    form {
+      max-width: 400px;
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #74b9ff;
+    }
+
+    .product {
+      background-color: #fff;
+      width: 250px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      color: #2d3436;
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      color: #636e72;
+      font-size: 14px;
+    }
+
+    .product button {
+      width: 45%;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #2d3436;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Our E-Commerce Portal</h2>
+    <p style="text-align:center;">Discover amazing products, great discounts, and fast delivery!</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" style="text-align:center;">
+    <h2>Featured Products</h2>
+
+    <div class="product">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQVX6d9ymzIlsYLV5S8uRtyEqoyvm-Ftmaj_fdpxGYV3FrykpajCrtdPZ9w4zkBjze-QQdStApye2jfw02Ei27pNwqQ1Iz5xLNKSkIen-Ytxld5tKdh3gzF3w" alt="Running Shoes">
+      <h3>Running Shoes</h3>
+      <p>Price: ₹1,999</p>
+      <button>Add to Cart</button>
+      <button>Add to Wishlist</button>
+    </div>
+
+    <div class="product">
+      <img src="data:image/jpeg;base64,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" alt="Wireless Headphones">
+      <h3>Wireless Headphones</h3>
+      <p>Price: ₹2,499</p>
+      <button>Add to Cart</button>
+      <button>Add to Wishlist</button>
+    </div>
+
+    <div class="product">
+      <img src="data:image/jpeg;base64,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" alt="Smart Watch">
+      <h3>Smart Watch</h3>
+      <p>Price: ₹3,999</p>
+      <button>Add to Cart</button>
+      <button>Add to Wishlist</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; width:80%; margin:auto;">
+      We are a next-generation online shopping platform that provides the best quality products,
+      secure payments, and fast delivery. Our goal is to make shopping easy and affordable for everyone.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label>Name:</label>
+      <input type="text" id="contactName" required>
+
+      <label>Email:</label>
+      <input type="email" id="contactEmail" required>
+
+      <label>Message:</label>
+      <textarea id="contactMessage" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label>Email:</label>
+      <input type="email" id="loginEmail" required>
+
+      <label>Password:</label>
+      <input type="password" id="loginPassword" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Register Section -->
+  <section id="register">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <label>Username:</label>
+      <input type="text" id="username" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Password:</label>
+      <input type="password" id="password" required>
+
+      <label>Confirm Password:</label>
+      <input type="password" id="confirmPassword" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Commerce Portal. All rights reserved.</p>
+  </footer>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    // Registration validation
+    const registerForm = document.getElementById("registerForm");
+    if (registerForm) {
+      registerForm.addEventListener("submit", function (e) {
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (username.length < 3) {
+          alert("Username must be at least 3 characters long.");
+          e.preventDefault();
+        } else if (password.length < 6) {
+          alert("Password must be at least 6 characters long.");
+          e.preventDefault();
+        } else if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          e.preventDefault();
+        } else {
+          alert("Registration successful!");
+        }
+      });
+    }
+
+    // Login validation
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+      loginForm.addEventListener("submit", function (e) {
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value.trim();
+
+        if (email === "" || password === "") {
+          alert("Both fields are required!");
+          e.preventDefault();
+        } else {
+          alert("Login successful!");
+        }
+      });
+    }
+
+    // Contact form
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Your message has been sent successfully!");
+        contactForm.reset();
+      });
+    }
+  </script>
+
+</body>
+</html>
