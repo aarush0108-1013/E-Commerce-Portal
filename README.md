@@ -1,1 +1,1 @@
-no capital
+
